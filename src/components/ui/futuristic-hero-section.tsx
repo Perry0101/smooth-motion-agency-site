@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import {
   useMotionTemplate,
@@ -44,10 +45,19 @@ export const AuroraHero = () => {
           conectam sua empresa ao futuro da tecnologia com inovação e excelência.
         </p>
         
-
+        {/* Project Showcase */}
+        <div className="mt-12 mb-16 max-w-4xl">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            <img 
+              src="/lovable-uploads/0ae4dff3-404a-44f3-bfd5-9529ecb09762.png" 
+              alt="OnlineJobHub Logo" 
+              className="w-full h-auto rounded-lg shadow-2xl"
+            />
+          </div>
+        </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
             <div className="text-2xl font-bold text-primary">50+</div>
             <div className="text-sm text-gray-400">Projetos Entregues</div>
