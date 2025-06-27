@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -26,10 +25,12 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#1e40af',
-					foreground: '#ffffff',
+					DEFAULT: '#3b82f6',
+					foreground: '#1e293b',
 					50: '#eff6ff',
 					100: '#dbeafe',
+					300: '#93c5fd',
+					400: '#60a5fa',
 					500: '#3b82f6',
 					600: '#2563eb',
 					700: '#1d4ed8',
@@ -37,18 +38,18 @@ export default {
 					900: '#1e3a8a'
 				},
 				secondary: {
-					DEFAULT: '#64748b',
-					foreground: '#ffffff',
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b',
-					600: '#475569',
-					700: '#334155',
-					800: '#1e293b',
-					900: '#0f172a'
+					DEFAULT: '#6b7280',
+					foreground: '#f9fafb',
+					50: '#f9fafb',
+					100: '#f3f4f6',
+					200: '#e5e7eb',
+					300: '#d1d5db',
+					400: '#9ca3af',
+					500: '#6b7280',
+					600: '#4b5563',
+					700: '#374151',
+					800: '#1f2937',
+					900: '#111827'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -69,7 +70,16 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				}
+				},
+				"color-1": "hsl(var(--color-1))",
+				"color-2": "hsl(var(--color-2))",
+				"color-3": "hsl(var(--color-3))",
+				"color-4": "hsl(var(--color-4))",
+				"color-5": "hsl(var(--color-5))",
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -146,7 +156,33 @@ export default {
 					'100%': {
 						transform: 'scale(1.05)'
 					}
-				}
+				},
+				rainbow: {
+					"0%": { "background-position": "0%" },
+					"100%": { "background-position": "200%" },
+				},
+				"rainbow-pulse": {
+					"0%, 100%": { 
+						"background-position": "0%",
+						"opacity": "0.6",
+						"transform": "scale(1) translateX(-50%)"
+					},
+					"25%": { 
+						"background-position": "50%",
+						"opacity": "0.9",
+						"transform": "scale(1.1) translateX(-50%)"
+					},
+					"50%": { 
+						"background-position": "100%",
+						"opacity": "1",
+						"transform": "scale(1.2) translateX(-50%)"
+					},
+					"75%": { 
+						"background-position": "150%",
+						"opacity": "0.9",
+						"transform": "scale(1.1) translateX(-50%)"
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -156,7 +192,9 @@ export default {
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 2s ease-in-out infinite',
-				'scale-hover': 'scale-hover 0.2s ease-out'
+				'scale-hover': 'scale-hover 0.2s ease-out',
+				rainbow: "rainbow var(--speed, 2s) infinite linear",
+				"rainbow-pulse": "rainbow-pulse var(--speed, 3s) infinite ease-in-out",
 			}
 		}
 	},

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -52,13 +51,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="py-24 bg-secondary-900 text-white">
+    <section id="contato" className="py-24 bg-secondary-900/80 text-foreground">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
             Vamos Conversar?
           </h2>
-          <p className="text-xl text-secondary-300 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Conte-nos sobre seu projeto e descubra como podemos ajudar a transformar suas ideias em realidade
           </p>
         </div>

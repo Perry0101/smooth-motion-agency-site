@@ -1,7 +1,6 @@
-
 import { useEffect } from 'react';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
+import TubelightHeader from '../components/TubelightHeader';
+import { AuroraHero } from '../components/ui/futuristic-hero-section';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
@@ -54,10 +53,10 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <div className="min-h-screen bg-background text-foreground">
+      <TubelightHeader />
       <main>
-        <Hero />
+        <AuroraHero />
         <Services />
         <Portfolio />
         <Testimonials />

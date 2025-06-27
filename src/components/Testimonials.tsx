@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
@@ -68,13 +67,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="depoimentos" className="py-24 bg-gradient-to-br from-primary-50 to-secondary-50">
+    <section id="depoimentos" className="py-24 bg-gradient-to-br from-secondary-900/30 to-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-secondary-800 mb-6 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
             O que Nossos Clientes Dizem
           </h2>
-          <p className="text-xl text-secondary-600 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Depoimentos reais de clientes que confiaram em nosso trabalho
           </p>
         </div>
@@ -95,7 +94,7 @@ const Testimonials = () => {
                   key={testimonial.id}
                   className="w-full flex-shrink-0 px-4"
                 >
-                  <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                  <div className="bg-card rounded-2xl p-8 md:p-12 shadow-xl hover:shadow-2xl border border-border transition-shadow duration-300">
                     <div className="flex items-center mb-6">
                       <img
                         src={testimonial.avatar}
@@ -104,10 +103,10 @@ const Testimonials = () => {
                         loading="lazy"
                       />
                       <div>
-                        <h4 className="text-xl font-bold text-secondary-800">
+                        <h4 className="text-xl font-bold text-card-foreground">
                           {testimonial.name}
                         </h4>
-                        <p className="text-secondary-600">{testimonial.role}</p>
+                        <p className="text-muted-foreground">{testimonial.role}</p>
                         <div className="flex items-center mt-2">
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <Star
@@ -119,11 +118,11 @@ const Testimonials = () => {
                       </div>
                     </div>
                     
-                    <blockquote className="text-lg md:text-xl text-secondary-700 leading-relaxed mb-6 italic">
+                    <blockquote className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 italic">
                       "{testimonial.text}"
                     </blockquote>
                     
-                    <div className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
+                    <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                       {testimonial.project}
                     </div>
                   </div>
@@ -135,15 +134,15 @@ const Testimonials = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 bg-white hover:bg-primary-50 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 bg-card hover:bg-accent p-3 rounded-full shadow-lg hover:shadow-xl border border-border transition-all duration-300 hover:scale-110 z-10"
           >
-            <ChevronLeft className="w-6 h-6 text-primary-600" />
+            <ChevronLeft className="w-6 h-6 text-primary" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 bg-white hover:bg-primary-50 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 bg-card hover:bg-accent p-3 rounded-full shadow-lg hover:shadow-xl border border-border transition-all duration-300 hover:scale-110 z-10"
           >
-            <ChevronRight className="w-6 h-6 text-primary-600" />
+            <ChevronRight className="w-6 h-6 text-primary" />
           </button>
 
           {/* Slide Indicators */}
@@ -154,17 +153,17 @@ const Testimonials = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide 
-                    ? 'bg-primary-600 scale-125' 
-                    : 'bg-primary-300 hover:bg-primary-400'
+                    ? 'bg-primary scale-125' 
+                    : 'bg-primary/30 hover:bg-primary/50'
                 }`}
               />
             ))}
           </div>
 
           {/* Progress Bar */}
-          <div className="w-full bg-primary-200 rounded-full h-1 mt-6">
+          <div className="w-full bg-primary/20 rounded-full h-1 mt-6">
             <div 
-              className="bg-primary-600 h-1 rounded-full transition-all duration-300"
+              className="bg-primary h-1 rounded-full transition-all duration-300"
               style={{ width: `${((currentSlide + 1) / testimonials.length) * 100}%` }}
             />
           </div>

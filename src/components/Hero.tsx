@@ -1,6 +1,7 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { RobotHero } from './RobotHero';
+
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,74 +41,71 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen overflow-hidden">
-      {/* Background Images */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/80 to-primary-900/60" />
-        </div>
-      ))}
-
-      {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-            {slides[currentSlide]?.title}
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            {slides[currentSlide]?.subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <button
-              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-            >
-              Ver Projetos
-            </button>
-            <button
-              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary-800 font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            >
-              Falar Conosco
-            </button>
-          </div>
+    <section id="home" className="relative">
+      {/* Robot Hero Section */}
+      <div className="min-h-screen flex items-center justify-center px-6 py-20">
+        <div className="w-full max-w-7xl mx-auto">
+          <RobotHero />
         </div>
       </div>
 
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110"
-      >
-        <ChevronLeft className="w-6 h-6 text-white" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 hover:scale-110"
-      >
-        <ChevronRight className="w-6 h-6 text-white" />
-      </button>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
-        {slides.map((_, index) => (
-          <button
+      {/* Traditional Hero Slider Section */}
+      <div className="relative h-screen overflow-hidden">
+        {/* Background Images */}
+        {slides.map((slide, index) => (
+          <div
             key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
-          />
+          >
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-gray-900/70" />
+          </div>
         ))}
+
+        {/* Content */}
+        <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
+              {slides[currentSlide]?.title}
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              {slides[currentSlide]?.subtitle}
+            </p>
+
+          </div>
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-black/30 hover:bg-black/50 rounded-full transition-all duration-300 hover:scale-110"
+        >
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-black/30 hover:bg-black/50 rounded-full transition-all duration-300 hover:scale-110"
+        >
+          <ChevronRight className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

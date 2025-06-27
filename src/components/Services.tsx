@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Code, Layout, Settings, Users } from 'lucide-react';
 
@@ -49,13 +48,13 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="servicos" ref={sectionRef} className="py-24 bg-secondary-50">
+    <section id="servicos" ref={sectionRef} className="py-24 bg-secondary-900/50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-secondary-800 mb-6 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
             Nossos Serviços
           </h2>
-          <p className="text-xl text-secondary-600 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Oferecemos soluções completas de desenvolvimento, desde a concepção até a entrega final
           </p>
         </div>
@@ -69,29 +68,29 @@ const Services = () => {
               <div
                 key={index}
                 data-index={index}
-                className={`group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${
+                className={`group bg-card p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-border transition-all duration-500 transform hover:-translate-y-2 ${
                   isVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center group-hover:bg-primary-600 transition-all duration-300 group-hover:scale-110">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary transition-all duration-300 group-hover:scale-110">
                     <IconComponent 
-                      className="w-8 h-8 text-primary-600 group-hover:text-white transition-colors duration-300" 
+                      className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" 
                     />
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-secondary-800 mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </h3>
                 
-                <p className="text-secondary-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
                 
                 <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <button className="text-primary-600 font-semibold hover:text-primary-700 transition-colors duration-200">
+                  <button className="text-primary font-semibold hover:text-primary/80 transition-colors duration-200">
                     Saiba mais →
                   </button>
                 </div>
