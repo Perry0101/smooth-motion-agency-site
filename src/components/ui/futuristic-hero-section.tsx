@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import {
   useMotionTemplate,
@@ -45,19 +44,7 @@ export const AuroraHero = () => {
           conectam sua empresa ao futuro da tecnologia com inovação e excelência.
         </p>
         
-        {/* Featured Project Preview */}
-        <div className="mt-8 mb-12 relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-          <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <h3 className="text-lg font-semibold text-white mb-3">Projeto em Destaque</h3>
-            <img 
-              src="/lovable-uploads/34cb6959-9575-4320-add7-cb5349813ed7.png" 
-              alt="OnlineJobHub - Plataforma de Empregos" 
-              className="w-full max-w-md rounded-lg shadow-2xl hover:scale-105 transition-transform duration-300"
-            />
-            <p className="text-gray-300 text-sm mt-3">OnlineJobHub - Plataforma moderna de conexão entre talentos e oportunidades</p>
-          </div>
-        </div>
+
 
         {/* Stats */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
