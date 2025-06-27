@@ -7,12 +7,14 @@ const Portfolio = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
 
+
+
   const projects = [
     {
       id: 1,
       title: 'OnlineJobHub.com',
       category: 'web',
-      image: '/lovable-uploads/0518c82d-9b36-476e-a9be-df1a7ed24501.png',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       description: 'Plataforma completa de marketplace de empregos online conectando candidatos e empresas com funcionalidades avançadas de busca e matching.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Express', 'TypeScript'],
       featured: true,
@@ -62,6 +64,8 @@ const Portfolio = () => {
             Conheça alguns dos projetos que desenvolvemos com paixão e dedicação
           </p>
         </div>
+
+
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
