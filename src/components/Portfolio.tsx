@@ -14,7 +14,7 @@ const Portfolio = () => {
       id: 1,
       title: 'OnlineJobHub.com',
       category: 'web',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/lovable-uploads/02d4d3b9-8996-4467-bf59-482314b08619.png',
       description: 'Plataforma completa de marketplace de empregos online conectando candidatos e empresas com funcionalidades avançadas de busca e matching.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Express', 'TypeScript'],
       featured: true,
