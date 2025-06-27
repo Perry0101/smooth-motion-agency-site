@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import {
   useMotionTemplate,
@@ -36,16 +35,6 @@ export const AuroraHero = () => {
         <span className="mb-1.5 inline-block rounded-full bg-primary/20 border border-primary/30 px-4 py-2 text-sm font-medium text-primary backdrop-blur-sm">
           🚀 Agência Digital
         </span>
-        
-        {/* Logo Image */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/4e56dde6-a57a-49e5-93cf-bf7620fc7c50.png" 
-            alt="OnlineJobHub Logo" 
-            className="max-w-md w-full h-auto"
-          />
-        </div>
-
         <h1 className="max-w-4xl bg-gradient-to-br from-white via-gray-200 to-gray-400 bg-clip-text text-center text-3xl font-bold leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
           Transformamos ideias em
           <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent"> soluções digitais</span>
