@@ -1,24 +1,94 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>smooth-motion-agency-site</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>MotionDev - Agência de Desenvolvimento</title>
+    <meta name="description" content="Agência especializada em desenvolvimento web, mobile e APIs. Transformamos ideias em soluções digitais excepcionais." />
+    <meta name="author" content="MotionDev" />
+    <meta name="keywords" content="desenvolvimento web, aplicativo mobile, API, consultoria tecnologia, agência digital" />
 
-    <meta property="og:title" content="smooth-motion-agency-site" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:title" content="MotionDev - Agência de Desenvolvimento" />
+    <meta property="og:description" content="Agência especializada em desenvolvimento web, mobile e APIs. Transformamos ideias em soluções digitais excepcionais." />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://motiondev.com" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:title" content="MotionDev - Agência de Desenvolvimento" />
+    <meta name="twitter:description" content="Agência especializada em desenvolvimento web, mobile e APIs. Transformamos ideias em soluções digitais excepcionais." />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#1e40af">
+    <meta name="msapplication-TileColor" content="#1e40af">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MotionDev",
+      "description": "Agência especializada em desenvolvimento web, mobile e APIs",
+      "url": "https://motiondev.com",
+      "logo": "https://motiondev.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-99999-9999",
+        "contactType": "customer service",
+        "email": "contato@motiondev.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/motiondev",
+        "https://github.com/motiondev"
+      ]
+    }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Performance monitoring (exemplo) -->
+    <script>
+      // Basic performance monitoring
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          if (perfData && perfData.loadEventEnd > 0) {
+            console.log('Page load time:', Math.round(perfData.loadEventEnd), 'ms');
+          }
+        }, 0);
+      });
+
+      // Error tracking (desenvolvimento)
+      window.addEventListener('error', function(e) {
+        console.error('JavaScript error:', e.error);
+      });
+
+      // Unhandled promise rejections
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e.reason);
+      });
+    </script>
   </body>
 </html>
